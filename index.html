@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eva Jimenez</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="index.js"></script>
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({ publicKey: 'BQ4GFFrzFJjpqQLIF' });
+   })();
+</script>
+</head>
+<body>
+ <section id="landing-page">
+  <nav>
+    <figure>
+      <img id="logo" src="./assets/capricorn-solid-full.svg" alt="Capricorn">
+    </figure>
+
+      <!-- Navigation links -->
+
+      <div class="nav__link--list">
+        <div class="nav__link">
+          <a href="#about" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </div>
+        <div class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </div>
+        <div class="nav__link">
+          <a href="#contact" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </div>
+        <div class="nav__link click">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </div>
+      </div>
+  </nav>
+  <header class="header">
+    <div class="header-content">
+    <h1 class="title">Hello!</h1>
+       <h1 class="title orange">I'm Evita.</h1>
+       <p class="header__para">
+        I'm a <b class="orange">Frontend Software Engineer</b> with a passion for creating beautiful and functional web experiences.
+        <br>
+        Here is more <b class="orange">about me</b>.
+      </p>
+      <div class="social__lists">
+        <a href="https://www.linkedin.com/in/eva-jimenez" target="_blank" rel="noopener noreferrer" class="social__link click" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/EvitaNez" target="_blank" rel="noopener noreferrer" class="social__link click" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="./assets/Example Resume.pdf" target="_blank" class="social__link click">
+          <i class="fab fa-file-pdf"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+  <button class="mail__btn click">
+  <i class="fas fa-envelope"></i>
+  </button>
+  <a href="#projects" class="scroll"> 
+    <div class="scroll__icon click"></div>
+  </a> 
+  <div class="modal">
+    <div class="modal__half modal__about">
+      <h3 class="modal__title ">Here is more about me.</h3>
+      <h4 class="modal__sub-title--about">Frontend Software Engineer</h4>
+      <p class="modal__para">I'm a software engineer  developing responsive and user-friendly web applications. I specialize in <b class="orange">consectetur adipiscing</b> elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <br>
+       I currently work on intricate and complex projects, focusing on <b class="orange">Harum in ipsa magni</b>. Fugit laboriosam <b class="orange">animi impedit</b>, commodi repellendus totam possimus sequi officia exercitationem doloribus dicta, voluptas facere, iure quisquam perferendis! 
+      </p>
+      <div class="modal__languages">
+        <figure class="modal__language">
+           <img class="modal__language--img" src="./assets/html5-brands-solid-full.svg" alt="">
+        <span class="language__name">HTML</span>
+        </figure>
+        <figure class="modal__language">
+           <i class="fa-brands fa-css3-alt modal__language--icon" aria-hidden="true"></i>
+          <span class="language__name">CSS</span>
+        </figure>
+          <figure class="modal__language">
+           <i class="fa-brands fa-js modal__language--icon" aria-hidden="true"></i>
+          <span class="language__name">JavaScript</span>
+        </figure>
+          <figure class="modal__language">
+           <i class="fa-brands fa-node modal__language--icon" aria-hidden="true"></i>
+          <span class="language__name">Node.js</span>
+        </figure>
+      </div>
+    </div>
+    <div class="modal__half modal__contact">
+      <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+<h4 class="modal__title--opportunities">I'm currently open to new opportunities!</h4>
+<form id="contact__form" onsubmit="contact(event)">
+  <div class="form__item">
+    <label class="form__item--label">Name</label>
+    <input class="input" name="user_name" type="text" required></input>
+  </div>
+  <div class="form__item">
+    <label class="form__item--label">Email</label>
+    <input class="input" name="user_email" type="email" required></input>
+  </div>
+  <div class="form__item">
+    <label class="form__item--label">Message</label>
+    <textarea class="input" name="message" required></textarea>
+  </div>
+  <button id="contact__submit" class="form__submit" type="submit">Send it my way!
+  </button>
+ </form>
+ <div class="modal__overlay modal__overlay--loading">
+  <i class="fas fa-spinner"></i>
+ </div>
+ <div class="modal__overlay modal__overlay--success">
+   Thanks for the message.I look forward to speaking with you soon.
+ </div>
+</div>
+<i class="fas fa-times modal__exit click"></i>
+  </div>
+</section>
+<section id="projects">
+  <div class="projects__container">
+    <div class="row">
+      <h1 class="section__title">
+        Here are some of my <label class="orange">projects</label>
+      </h1>
+      <ul class="projects__list">
+        <li class="project">
+          <div class="project__wrapper">
+            <img src="./assets/blinker mockup.png" class="project__img" alt="Car sales project mockup">
+            <div class="project__wrapper--background"></div>
+          <div class="project__description">
+            <h4 class="project__description--title">
+              Car Sales Project</h4>
+              <h4 class="project__description--sub-title">
+                HTML, CSS, and JavaScript, Vue, Vuex
+              </h4>
+              <p class="project__description--para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="project__description--links">
+                <a href="#" class="project__description--link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project__description--link">
+                  <i class="fas fa-link"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer>
+<div class="container">
+  <div class="row footer__row">
+
+  <figure>
+    <img class="footer__logo--img" src="./assets/capricorn-solid-full.svg" alt="Capricorn">
+  </figure>
+  <div class="footer__social--list">
+    <a href="https://github.com/EvitaNez" target="_blank" rel="noopener noreferrer" class="footer__social--link link__hover-effect link__hover-effect--white">
+      Github
+    </a>
+    <a href="https://www.linkedin.com/in/eva-jimenez" target="_blank" rel="noopener noreferrer" class="footer__social--link link__hover-effect link__hover-effect--white">
+      LinkedIn
+    </a>
+    <a href="#contact" class="footer__social--link link__hover-effect link__hover-effect--white">
+      Contact
+    </a>
+    <a href="./assets/Example Resume.pdf" target="_blank" rel="noopener noreferrer" class="
+    footer__social--link
+    link__hover-effect
+    link__hover-effect--white">
+      Resume
+    </a>
+  </div>
+  <div class="footer__copywright">
+    <p>&copy; 2026 Evita Jimenez. </p>
+  </div>
+</div>
+
+</footer>
+</body>
+</html>
